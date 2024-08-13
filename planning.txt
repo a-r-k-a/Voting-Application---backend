@@ -1,0 +1,44 @@
+voting application
+--WHAT?
+    --A functionality where user can give vote to given set of candidates
+
+    **Figuring out models and routes
+
+    Functionalities:-
+        --1. Sign Up / Registration feature
+        --2. Login / Sign In feature  user--unique id number and password
+        --3. See the list of candidates
+        --4. Only one vote per person
+        --5. rote for list of candidates and their votes in real time sorted by their votes
+        --6. user data must contain 1 unique id proof
+        --7. one Admin maintaining the list of candidates but will not vote
+        --8. users can change their password
+        --9. Admin cannot give vote
+
+    ---------------------------------------------------------------------------------------------
+
+    Routes:-
+        User Authentication:
+
+            /signup ==> POST - Create new user Account
+            /login ==> POST - Log in to an existing account
+
+        Voting:
+
+            /candidates ==> GET - Get the list of candidates
+            /vote/:candidateId ==> GET = Vote for a specific candidate
+
+        Vote Counts: 
+
+            /vote/counts ==> GET - Get the list of candidates sorted by their vote count
+
+        User Profile:
+
+            /profile ==> GET - Get the user's profile information
+            /profile/password ==> PUT - change the user's password
+
+        Admin Candidate Management:
+
+            /candidates ==> POST - Create a new candidate
+            /candidate/:candidateId ==> PUT - Update an existing candidate
+            /candidate/:candidateId ==> DELETE - Delete an existing candidate
